@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sportify</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      href="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/2048px-Spotify_logo_without_text.svg.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script defer src="java.js"></script>
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="sidebar-nav">
+        <div class="logo">
+          <a href=""><img src="site/logo.jpg" alt=""></a>
+        </div>
+        <ul>
+          <li> <a href="" id="home-btn">
+             <span><i class="fa-solid fa-house"></i></span> 
+            <span>Home</span> 
+          </a> 
+          </li>
+          <li> <a href="" id="search-btn">
+             <span><i class="fa-solid fa-magnifying-glass"></i></span> 
+            <span>Search</span>
+           </a> 
+          </li>
+        </ul>
+      </div>
+
+      <div class="sidebar-nav box2">
+        <ul>
+          <li>
+            <a href="">
+              <span><i class="fa-solid fa-book"></i></span>
+              <span class="libary">Your Libary</span>
+            </a>
+          </li>
+          <li>
+            <div class="scrollbar-scroll">
+              <div class="create-playlist">
+                <h4>Create your first playlist</h4>
+                <p>It's easy, we'll help you</p>
+                <button onclick="addSongToPlaylist()">Create Playlist</button>
+              </div>
+              <div id="playlist"></div>
+              <div id="song-input">
+                <input type="text" id="song-name" placeholder="Enter song name" />
+                <button onclick="addSong()">Add Song</button>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class="privacy">
+          <ul>
+            <li>
+              <a href=""> Legal</a>
+              <a href="">Safety & Privacy Center</a>
+              <a href="">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="">Cookies</a>
+              <a href="">About Us</a>
+              <a href="">Accessibility</a>
+            </li>
+            <li>
+              <a href="">Cookies</a>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="eng-btn"> <button> <i class="fa-solid fa-globe"></i> English </button> </div>
+      </div>
+    </div> 
+    <div class="main-section">
+      <div class="top-nav">
+        <div class="prev-btn">
+          <button><i class="fa-solid fa-chevron-left"></i></button>
+          <button><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+
+        <div class="login-btn">
+          <button class="sign-up">Sign Up</button>
+          <button class="login">Login</button>
+        </div>
+      </div>
+
+      <div class="hub-playlist">
+        <h2>Popular Album</h2>
+        <div class="card">
+          <div class="item">
+            <img src="site/ozeba.jpg" alt="">
+            <div class="play-btn">
+              <span><i class="fa-solid fa-play" id="play1" onclick="playPauseSong('song1', 'play1')"></i></span>
+            </div>
+            <h4>OZEBA</h4>
+            <P>REMA TYPESEAT</P>
+          </div>
+          <audio id="song1" src="music/song1.mp3"></audio>
+
+          <div class="item">
+            <img src="site/img.jpg" alt="">
+            <div class="play-btn">
+              <span><i class="fa-solid fa-play" id="play2" onclick="playPauseSong('song2', 'play2')"></i></span>
+            </div>
+            <h4>BOP DADDY</h4>
+            <P>FALZ X MS BANKS</P>
+          </div>
+          <audio id="song2" src="music/song2.mp3"></audio>
+
+          <div class="item">
+            <img src="site/ginger.jpg" alt="">
+            <div class="play-btn">
+              <span><i class="fa-solid fa-play" id="play3" onclick="playPauseSong('song3', 'play3')"></i></span>
+            </div>
+            <h4>GINGER ME</h4>
+            <P>REMA</P>
+          </div>
+          <audio id="song3" src="music/song1.mp3"></audio>
+
+          <div class="item">
+            <img src="site/redoo.jpg" alt="">
+            <div class="play-btn">
+              <span><i class="fa-solid fa-play" id="play4" onclick="playPauseSong('song4', 'play4')"></i></span>
+            </div>
+            <h4>WOMAN</h4>
+            <P>REMA</P>
+          </div>
+          <audio id="song4" src="music/song4.mp3"></audio>
+
+          <div class="item">
+            <img src="site/TIMMYTURNER.jpg" alt="">
+            <div class="play-btn">
+              <span><i class="fa-solid fa-play" id="play5" onclick="playPauseSong('song5', 'play5')"></i></span>
+            </div>
+            <h4>TIMMY TURNER</h4>
+            <P>DESIIGNER</P>
+          </div>
+        </div>
+      </div>
+      <audio id="song5" src="music/song5.mp3"></audio>
+
+      <div class="hub-playlist">
+        <h2>TRENDING ALBUMS</h2>
+        <div class="card">
+          <div class="item">
+            <img src="site/dem.jpg" alt="">
+            <div class="play-btn">
+              <span><i class="fa-solid fa-play" id="play6" onclick="playPauseSong('song6', 'play6')"></i></span>
+            </div>
+            <h4>EGWU</h4>
+            <P>CHIKE & MOBAD</P>
+          </div>
+          <audio id="song6" src="music/song6.mp3"></audio>
+
+          <div class="item">
+            <img src="site/JUICE.jpg" alt="">
+            <div class="play-btn">
+              <span><i class="fa-solid fa-play" id="play7" onclick="playPauseSong('song7', 'play7')"></i></span>
+            </div>
+            <h4>LUCID DREAMS</h4>
+            <P>JUICE WRLD</P>
+          </div>
+          <audio id="song7" src="music/song7.mp3"></audio>
+
+          <div class="item">
+            <img src="site/SCOTT.jpg" alt="">
+            <div class="play-btn">
+              <span><i class="fa-solid fa-play" id="play8" onclick="playPauseSong('song8', 'play8')"></i></span>
+            </div>
+            <h4>FE!N</h4>
+            <P>TRAVIS SCOTT</P>
+          </div>
+          <audio id="song8" src="music/song8.mp3"></audio>
+
+          <div class="item">
+            <img src="site/artwor.jpg" alt="">
+            <div class="play-btn">
+              <span><i class="fa-solid fa-play" id="play9" onclick="playPauseSong('song9', 'play9')"></i></span>
+            </div>
+            <h4>BANB4BAND</h4>
+            <P>CENTRAL CEE FT. LIL BABY</P>
+          </div>
+          <audio id="song9" src="music/song9.mp3"></audio>
+
+          <div class="item">
+            <img src="site/DURK.jpg" alt="">
+            <div class="play-btn">
+              <span><i class="fa-solid fa-play" id="play10" onclick="playPauseSong('song10', 'play10')"></i></span>
+            </div>
+            <h4>ALL MY LIFE</h4>
+            <P>LIL DURK ft. J.COLE</P>
+          </div>
+          <audio id="song10" src="music/song10.mp3"></audio>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <div class="footer">
+          <div class="footer-links">
+            <div class="footer-column">
+              <div>Company</div>
+              <ul class="col-links">
+                <li><a href="">About</a></li>
+                <li><a href="">Jobs</a></li>
+                <li><a href="">For the record</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <div>Communities</div>  
+              <ul class="col-links">
+                <li><a href="">For Artist</a></li>
+                <li><a href="">Overlopers</a></li>
+                <li><a href="">Advertisers</a></li>
+                <li><a href="">Investors</a></li>
+            </div>
+            <div class="footer-column">
+                <div>Useful links</div>
+                <ul class="col-links">
+                  <li><a href="">Support</a></li>                 
+                  <li><a href="">Free Mobile App</a></li>       
+                </ul>
+              </div>
+            </div>
+  
+            <div class="social-links">
+              <div>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-facebook"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+  
+        <div>
+          <p class="copyright">&copy;2024 KOBBY'S DARKS HUB</p>
+        </div>
+  
+      </div>
+    </div>
+  </body>
+</html>
